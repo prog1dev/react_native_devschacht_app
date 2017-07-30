@@ -19,13 +19,16 @@
     "test": "node node_modules/jest/bin/jest.js --watch",
     "build": "babel src/ -d lib/",
     "prepublish": "yarn run build",
-    "flow": "flow"
+    "flow": "flow",
+    "npx": "npx"
   },
   "jest": {
     "preset": "jest-expo"
   },
   "dependencies": {
+    "@expo/vector-icons": "^5.0.0",
     "expo": "^19.0.0",
+    "native-base": "^2.1.5",
     "react": "16.0.0-alpha.12",
     "react-native": "^0.46.1",
     "yarn": "^0.27.5"
