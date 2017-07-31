@@ -2,6 +2,7 @@ import React from 'react';
 import { Container, Content } from 'native-base';
 import { StyleSheet, Text, View } from 'react-native';
 import AppFooter from './components/AppFooter.js';
+import MODES from './constants';
 
 const styles = StyleSheet.create({
   container: {
