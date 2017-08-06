@@ -2,7 +2,15 @@ import React from 'react';
 import { Container, Content } from 'native-base';
 import { StyleSheet, Text, View } from 'react-native';
 import AppFooter from './components/AppFooter.js';
-import MODES from './constants';
+import { createStore } from 'redux';
+import { Provider } from 'react-redux';
+import reducers from './reducers';
+import { MODES } from './constants'; 
+
+const intialState = {
+  mode: MODES.ARTICLES
+};
+const store = createStore(reducers, intialState)
 
 const styles = StyleSheet.create({
   container: {
@@ -14,16 +22,18 @@ const styles = StyleSheet.create({
 });
 
 const App = () => (
-  <Container>
-    <Content>
-      <View style={styles.container}>
-        <Text>
-          Hello world!
-        </Text>
-      </View>
-    </Content>
-    <AppFooter/>
-  </Container>
+  <Provider store={store}>
+    <Container>
+      <Content>
+        <View style={styles.container}>
+          <Text>
+            Hello world!
+          </Text>
+        </View>
+      </Content>
+      <AppFooter/>
+    </Container>
+  </Provider>
 )
 
 export default App;
