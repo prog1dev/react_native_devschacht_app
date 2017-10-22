@@ -1,6 +1,7 @@
 import React from 'react';
 import { Footer, FooterTab, Button, Text } from 'native-base';
 import { MODES } from '../constants';
+import PropTypes from 'prop-types';
 
 const AppFooter = ({ mode = MODES.ARTICLES, setMode = () => {} }) => (
 	<Footer>
@@ -18,5 +19,10 @@ const AppFooter = ({ mode = MODES.ARTICLES, setMode = () => {} }) => (
 		</FooterTab>
 	</Footer>
 );
+
+AppFooter.propTypes = {
+  mode: PropTypes.string,
+  setMode: PropTypes.func
+};
 
 export default AppFooter;
