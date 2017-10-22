@@ -1,11 +1,11 @@
 import React from 'react';
 import { Container, Content } from 'native-base';
 import { StyleSheet, Text, View } from 'react-native';
-import AppFooter from './components/AppFooter.js';
+import AppFooterContainer from './containers/AppFooterContainer.js';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 import reducers from './reducers';
-import { MODES } from './constants'; 
+import { MODES } from './constants';
 
 const intialState = {
   mode: MODES.ARTICLES
@@ -31,7 +31,7 @@ const App = () => (
           </Text>
         </View>
       </Content>
-      <AppFooter/>
+      <AppFooterContainer/>
     </Container>
   </Provider>
 )
