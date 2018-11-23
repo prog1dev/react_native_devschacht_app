@@ -1,11 +1,11 @@
 import React from 'react';
 import { Container, Content } from 'native-base';
 import { StyleSheet, Text, View } from 'react-native';
-import AppFooterContainer from './containers/AppFooterContainer.js';
+import AppFooterContainer from './src/containers/AppFooterContainer.js';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
-import reducers from './reducers';
-import { MODES } from './constants';
+import reducers from './src/reducers';
+import { MODES } from './src/constants';
 
 const intialState = {
   mode: MODES.ARTICLES
